@@ -1,0 +1,269 @@
+.sprite {
+    background: url(../images/spritesheet.png) no-repeat;
+    display: block;
+}
+
+.sprite-cat {
+    width: 12px;
+    height: 12px;
+    background-position: -2px -2px;
+    float: left;
+    margin: 13px 15px 0 0;
+}
+
+.sprite-cat_1 {
+    width: 16px;
+    height: 16px;
+    background-position: -18px -2px;
+    float: left;
+    margin: 11px 15px 0 0;
+}
+
+.sprite-cat_2 {
+    width: 14px;
+    height: 17px;
+    background-position: -38px -2px;
+    float: left;
+    margin: 11px 15px 0 0;
+}
+
+.sprite-cat_3 {
+    width: 16px;
+    height: 12px;
+    background-position: -49px -1px;
+}
+
+.sprite-cat_4 {
+    width: 14px;
+    height: 14px;
+    background-position: -76px -2px;
+}
+
+.sprite-cat_5 {
+    width: 16px;
+    height: 15px;
+    background-position: -94px -2px;
+}
+
+.sprite-category_2 {
+    width: 45px;
+    height: 45px;
+    background-position: -56px -21px;
+}
+
+.sprite-category_3 {
+    width: 45px;
+    height: 45px;
+    background-position: -2px -70px;
+}
+
+.sprite-category_4 {
+    width: 45px;
+    height: 45px;
+    background-position: -51px -70px;
+}
+
+.sprite-category_1 {
+    width: 45px;
+    height: 45px;
+    background-position: -114px -2px;
+}
+
+.sprite-clock {
+    width: 11px;
+    height: 11px;
+    background-position: -163px -2px;
+}
+
+.sprite-comment {
+    width: 12px;
+    height: 13px;
+    background-position: -178px -2px;
+}
+
+.sprite-data {
+    width: 8px;
+    height: 8px;
+    background-position: -2px -19px;
+    float: left;
+    margin: 2px 2px 0 0;
+}
+
+.sprite-dislake {
+    width: 16px;
+    height: 14px;
+    background-position: -163px -19px;
+}
+
+.sprite-forum {
+    width: 24px;
+    height: 20px;
+    background-position: -1px -36px;
+}
+
+.sprite-like {
+    width: 16px;
+    height: 14px;
+    background-position: -28px -37px;
+}
+
+.sprite-likes {
+    width: 14px;
+    height: 11px;
+    background-position: -163px -37px;
+}
+
+.sprite-login {
+    width: 22px;
+    height: 23px;
+    background-position: -104px -51px;
+}
+
+.sprite-pause {
+    width: 5px;
+    height: 6px;
+    background-position: -183px -19px;
+}
+
+.sprite-play {
+    width: 5px;
+    height: 6px;
+    background-position: -105px -29px;
+}
+
+.sprite-player_back {
+    width: 9px;
+    height: 7px;
+    background-position: -183px -29px;
+}
+
+.sprite-player_fullscreen {
+    width: 9px;
+    height: 9px;
+    background-position: -181px -40px;
+}
+
+.sprite-player_next {
+    width: 9px;
+    height: 7px;
+    background-position: -129px -53px;
+}
+
+.sprite-player_play {
+    width: 8px;
+    height: 10px;
+    background-position: -142px -53px;
+}
+
+.sprite-player_setings {
+    width: 10px;
+    height: 10px;
+    background-position: -154px -53px;
+}
+
+.sprite-player_vol {
+    width: 12px;
+    height: 13px;
+    background-position: -168px -53px;
+}
+
+.sprite-player_volume {
+    width: 11px;
+    height: 9px;
+    background-position: -129px -70px;
+}
+
+.sprite-rcat {
+    width: 12px;
+    height: 12px;
+    background-position: -144px -70px;
+}
+
+.sprite-rcat_1 {
+    width: 16px;
+    height: 16px;
+    background-position: -160px -70px;
+}
+
+.sprite-rcat_2 {
+    width: 14px;
+    height: 17px;
+    background-position: -100px -90px;
+}
+
+.sprite-rcat_3 {
+    width: 16px;
+    height: 12px;
+    background-position: -118px -90px;
+}
+
+.sprite-rcat_4 {
+    width: 14px;
+    height: 14px;
+    background-position: -138px -90px;
+}
+
+.sprite-rcat_5 {
+    width: 16px;
+    height: 15px;
+    background-position: -156px -90px;
+}
+
+.sprite-repost {
+    width: 12px;
+    height: 9px;
+    background-position: -180px -70px;
+}
+
+.sprite-rforum {
+    width: 24px;
+    height: 20px;
+    background-position: -117px -108px;
+}
+
+.sprite-rlogin {
+    width: 22px;
+    height: 23px;
+    background-position: -143px -108px;
+}
+
+.sprite-rsearch {
+    width: 16px;
+    height: 16px;
+    background-position: -176px -90px;
+}
+
+.sprite-search {
+    width: 16px;
+    height: 16px;
+    background-position: -168px -110px;
+}
+
+.sprite-share {
+    width: 12px;
+    height: 13px;
+    background-position: -2px -130px;
+}
+
+.sprite-star {
+    width: 13px;
+    height: 12px;
+    background-position: -18px -130px;
+    margin: 3px 3px;
+    float: left;
+}
+
+.sprite-views_1 {
+    width: 8px;
+    height: 5px;
+    background-position: -184px -53px;
+    float: left;
+    margin: 3px 2px 0 0;
+}
+
+.sprite-views_2 {
+    width: 16px;
+    height: 10px;
+    background-position: -35px -130px;
+}
+

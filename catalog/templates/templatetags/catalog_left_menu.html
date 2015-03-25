@@ -1,0 +1,24 @@
+{{ val }}  {{ val2 }}
+<ul class="catalog_nav">
+    <li>
+        <span class="catalog_nav_show">
+            <span class="sprite sprite-cat"></span>
+            <a href="/catalog/">Каталог</a>
+        </span>
+    </li>
+    {% for parent_cat in categories %}
+    <li class="{% if parent_cat == parent and parent != None and child != None %}active{% endif %}">
+        <span class="catalog_nav_show {% if parent_cat == parent and parent != None %}active{% endif %}">
+            {% if parent_cat.icon_class %}
+            <span class="sprite {{ parent_cat.icon_class }}"></span>
+            {% endif %}
+            <a href="/catalog/{{ parent_cat.url }}/">{{ parent_cat.title }}</a>
+        </span>
+        <ul class="catalog_nav2">
+            {% for child_cat in parent_cat.categories %}
+            <li><a class="{% if child_cat == child and child != None %}active{% endif %}" href="/catalog/{{ child_cat.url }}/">{{ child_cat.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </li>
+    {% endfor %}
+</ul>

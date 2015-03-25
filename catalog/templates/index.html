@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+
+{% block bread_crumbs %}
+<ul class="bread_crumbs">
+    <li><a href="/">Главная</a></li>
+    <li>></li>
+    <li><a class="active" href="/catalog/">Каталог</a></li>
+</ul>
+{% endblock %}
+
+{% block content %}
+    {% for categ in categories %}
+    <div class="catalog_item">
+        {% if categ.icon_class_page %}
+        <div class="sprite {{ categ.icon_class_page }}"></div>
+        {% endif %}
+        <h3><a href="/catalog/{{ categ.url }}/">{{ categ.title }}</a></h3>
+        <span>123</span>
+        <ul>
+            {% for child in categ.categories %}
+            <li><a href="/catalog/{{ child.url }}/">{{ child.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endfor %}
+{% endblock %}

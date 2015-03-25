@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load catalog_left_menu %}
+
+{% block left %}
+<div class="left_box left_box_hidden">
+    {% catalog_left_menu None None %}
+    <div class="left_box_hidden_bottom">▶</div>
+</div>
+{% endblock %}
+
+{% block content %}
+    тут контент
+{% endblock %}
+
+
+{% block right %}
+<div class="right_box right_box_forum" data-content="▶">
+    <h3>
+        <span class="sprite sprite-star"></span>
+        Популярные теги
+    </h3>
+</div>
+{% endblock %}

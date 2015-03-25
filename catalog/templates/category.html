@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load catalog_left_menu %}
+
+{% block left %}
+<div class="left_box">
+    {% if categ.parent %}
+    {% catalog_left_menu categ.parent categ %}
+    {% else %}
+    {% catalog_left_menu categ None %}
+    {% endif %}
+</div>
+{% endblock %}
+
+
+{% block bread_crumbs %}
+<ul class="bread_crumbs">
+    <li><a href="/">Главная</a></li>
+    <li>></li>
+    <li><a href="/catalog/">Каталог</a></li>
+    <li>></li>
+    <li><a class="active" href="/catalog/{{ categ.url }}/">{{ categ.title }}</a></li>
+</ul>
+{% endblock %}
+
+
+{% block content %}
+
+    {% for video in videos %}
+    <div class="popular_video_item">
+        <a href="/catalog/{{ categ.url }}/{{ video.url }}/">
+            <div class="popular_video_item_img">
+                <img src="/{{ video.preview }}" alt="{{ video.title }}"/>
+            </div>
+            <h4>{{ video.title }}</h4>
+        </a>
+        <p class="view_count">13453</p>
+        <p class="date">10.11.15</p>
+    </div>
+    {% endfor %}
+
+{% endblock %}
+

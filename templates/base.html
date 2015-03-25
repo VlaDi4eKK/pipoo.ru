@@ -1,0 +1,99 @@
+{% load static %}
+{% load catalog_left_menu %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pipoo.ru</title>
+	<link rel="stylesheet" type="text/css" media="screen" href="{% static "css/style.css" %}" />
+	<link rel="stylesheet" type="text/css" media="screen" href="{% static "css/styles_sprite.css" %}" />
+</head>
+<body>
+<div class="header">
+	<div class="top">
+		<a href="/" class="logo">
+			<h1>Pippoo.ru</h1>
+		</a>
+
+		<h3>Слоган, Слоган, Слоган !</h3>
+
+		<ul class="top_menu">
+			<li><a href="/forum/" class="forum">Форум</a></li>
+			<li><a href="#" class="login">Войти</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="grid-960">
+    {% block left %}
+	<div class="left_box">
+        {% catalog_left_menu None None %}
+	</div>
+    {% endblock %}
+
+	<div class="content_box">
+        {% block search %}
+        <form action="" method="post" class="search">
+            <input placeholder="Поиск видео.." type="text"/>
+            <input type="submit" value=""/>
+        </form>
+        {% endblock %}
+
+        {% block bread_crumbs %}
+		<ul class="bread_crumbs">
+			<li><a href="#">Главная</a></li>
+			<li>></li>
+			<li><a href="#">Пункт</a></li>
+			<li>></li>
+			<li><a class="active" href="#">Подпункт</a></li>
+		</ul>
+        {% endblock %}
+
+		<div class="contener">
+			{% block content %}content{% endblock %}
+		</div>
+
+	</div>
+
+
+    {% block right %}
+	<div class="right_box">
+		<h3>
+			<span class="sprite sprite-star"></span>
+			Популярное видео
+        </h3>
+        <div class="popular_video_item">
+            <a href="#">
+                <div class="popular_video_item_img">
+                    <img src="/static/images/324234.png" alt=""/>
+                </div>
+                <h4>Greatest Hits Of Trance #06  (Various Styles 4 hours Mix)</h4>
+            </a>
+            <p class="view_count">13453</p>
+            <p class="date">10.11.15</p>
+        </div>
+	</div>
+    {% endblock %}
+
+</div>
+
+<div style="clear:both"></div>
+
+<div class="footer">
+	<div class="footer_box">
+		<ul>
+			<li><a href="#">О нас</a></li>
+			<li><a href="#">Контакты</a></li>
+			<li><a href="#">Заявки на видео</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="bottom">
+	<p class="copypaste">© 2015 Pipoo.ru</p>
+	<a href="#" class="developers">Ссылка на разработчиков</a>
+</div>
+
+<script type="text/javascript" src="{% static "js/jquery.min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/script.js" %}"></script>
+</body>
+</html>
