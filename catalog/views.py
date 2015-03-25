@@ -26,6 +26,6 @@ def video_view(request, url_categ, url_video):
     try:
         categ = Category.objects.get(url=url_categ)
         video = Video.objects.get(url=url_video)
-    except Category.DoesNotExist, Video.DoesNotExist:
+    except:
         raise Http404
     return render_to_response("video.html", {'categ': categ, 'video': video})

@@ -6,4 +6,5 @@ urlpatterns = patterns('',
     url(r'^$', "catalog.views.home"),
     url(r'^forum/', include("forum.urls")),
     url(r'^catalog/', include("catalog.urls")),
+    url(r'^account/', include("account.urls")),
 )

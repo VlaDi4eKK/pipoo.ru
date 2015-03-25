@@ -83,6 +83,7 @@ body {background: #edece8}
 .grid-960 {
 	width: 960px;
 	margin: 10px auto;
+    position: relative;
 }
 
 
@@ -254,6 +255,9 @@ body {background: #edece8}
     overflow: hidden;
     float: left;
     margin-bottom: 10px;
+}
+.video_box .player img {
+    width: 100%;
 }
 .video_box .navigation {
     width: 155px;
@@ -534,6 +538,16 @@ body {background: #edece8}
 
 
 
+/* ACCOUNTS (cabinet) */
+.account_box {
+    width: 720px;
+}
+.account_contener {
+    width: 690px;
+}
+
+
+
 @media screen and (max-width:960px) {
 	.top {
 		width: 720px;
@@ -599,5 +613,15 @@ body {background: #edece8}
     .right_box_forum {
         width: 200px;
         margin-top: 0;
+    }
+
+
+
+    /* ACCOUNTS (cabinet) */
+    .account_box {
+        width: 480px;
+    }
+    .account_contener {
+        width: 460px;
     }
 }
