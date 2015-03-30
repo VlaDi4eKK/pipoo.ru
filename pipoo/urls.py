@@ -7,4 +7,5 @@ urlpatterns = patterns('',
     url(r'^forum/', include("forum.urls")),
     url(r'^catalog/', include("catalog.urls")),
     url(r'^account/', include("account.urls")),
+    url(r'^comment/', include("comments.urls")),
 )

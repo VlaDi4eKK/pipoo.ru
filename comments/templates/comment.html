@@ -1,33 +1,7 @@
 {% extends "base.html" %}
-{% load catalog_left_menu %}
-{% load comments %}
-
-{% block left %}
-<div class="left_box">
-    {% if categ.parent %}
-    {% catalog_left_menu categ.parent categ %}
-    {% else %}
-    {% catalog_left_menu categ None %}
-    {% endif %}
-</div>
-{% endblock %}
-
-
-{% block bread_crumbs %}
-<ul class="bread_crumbs">
-    <li><a href="/">Главная</a></li>
-    <li>></li>
-    <li><a href="/catalog/">Каталог</a></li>
-    <li>></li>
-    <li><a href="/catalog/{{ categ.url }}/">{{ categ.title }}</a></li>
-    <li>></li>
-    <li><a class="active" href="/catalog/{{ categ.url }}/{{ video.url }}/">{{ video.title }}</a></li>
-</ul>
-{% endblock %}
-
 
 {% block content %}
-<div class="video_box">
+    <div class="video_box">
     <div class="player">
         <img src="/{{ video.preview }}" alt=""/>
     </div>
@@ -79,10 +53,38 @@
 
         {{ video.text|safe }}
 
-        {% comments video %}
-
     </div>
 
 </div>
+<div class="comment_box">
+<span class="comment_count">Все комментраии({{ comments.count }})</span>
+	<div class="comment_wrapper">
+		<div class="my_comment_avatar"></div>
+		<div class="area_wrapper">
+			<textarea name="my_comment" id="my_comment" cols="30" rows="10" placeholder="Напишите Ваш комментарий здесь..."></textarea>
+		</div>
+	</div>
+    {% for comment in comments %}
+	<div class="comment_wrapper">
+		<div class="my_comment_avatar" ></div>
+		<div class="comment_content">
+			<a class="comment_nick" href="">{{ comment.nick }}</a>
+			<a class="comment_repost" href="">{{ comment.nick }}</a>
+			<span class="comment_time">15 минут</span>
+			<div class="comment_wrapper_content">
+				<p class="comment_text" contenteditable="true">{{ comment.text }}</p>
+{#                {{ comment.content }}#}
+				<img class="comment_video"/>
+				<img class="comment_video"/>
+			</div>
+			<a class="comment_like" href="">Нравится</a>
+			<a class="comment_answer" href="">Ответить</a>
+			<a class="comment_share" href="">Поделиться</a>
+		</div>
+	</div>
+    {% endfor %}
+</div>
 {% endblock %}
+
+
 

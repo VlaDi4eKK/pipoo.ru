@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'account',
     'catalog',
+    'comments',
     'forum',
 )
 
@@ -92,4 +93,5 @@ TEMPLATE_DIRS = (
     os.path.join(BASE_DIR,  'catalog/templates'),
     os.path.join(BASE_DIR,  'forum/templates'),
     os.path.join(BASE_DIR,  'account/templates'),
+    os.path.join(BASE_DIR,  'comments/templates'),
 )

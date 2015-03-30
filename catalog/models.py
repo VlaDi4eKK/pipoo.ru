@@ -29,3 +29,5 @@ class Video(models.Model):
     text = models.TextField("Описание")
     view_count = models.IntegerField("Просмотры", default=0)
     preview = models.ImageField(verbose_name="Превью", upload_to="static/uploads/", blank=True)
+    def __unicode__(self):
+        return self.title
